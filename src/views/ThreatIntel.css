@@ -1,0 +1,133 @@
+.intel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.intel__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+
+.familylist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.familylist__row {
+  display: grid;
+  grid-template-columns: 160px 1fr 44px;
+  align-items: center;
+  gap: 12px;
+}
+
+.familylist__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.familylist__name {
+  font-size: 12.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.familylist__type {
+  font-size: 10.5px;
+  color: var(--text-2);
+}
+
+.familylist__bar-track {
+  height: 6px;
+  border-radius: 4px;
+  background: var(--bg-3);
+  overflow: hidden;
+}
+
+.familylist__bar {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.familylist__count {
+  font-size: 12px;
+  color: var(--text-1);
+  text-align: right;
+}
+
+.originlist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.originlist__row {
+  display: grid;
+  grid-template-columns: 10px 40px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.originlist__row:last-child { border-bottom: none; }
+
+.originlist__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.originlist__sev {
+  color: var(--text-2);
+  text-transform: capitalize;
+}
+
+.originlist__count {
+  color: var(--text-1);
+}
+
+.ioclist__row {
+  display: grid;
+  grid-template-columns: 1.6fr 0.7fr 1fr 0.7fr;
+  gap: 10px;
+  padding: 9px 2px;
+  font-size: 12.5px;
+  border-bottom: 1px solid var(--line-soft);
+  align-items: center;
+}
+
+.ioclist__row:last-child { border-bottom: none; }
+
+.ioclist__row--head {
+  color: var(--text-2);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.ioclist__hash {
+  color: var(--text-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ioclist__source {
+  color: var(--text-1);
+}
+
+.ioclist__seen {
+  color: var(--text-2);
+}
+
+@media (max-width: 1100px) {
+  .intel__grid { grid-template-columns: 1fr; }
+}

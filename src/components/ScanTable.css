@@ -1,0 +1,73 @@
+.scantable {
+  display: flex;
+  flex-direction: column;
+}
+
+.scantable__row {
+  display: grid;
+  grid-template-columns: 1.6fr 1.4fr 1.2fr 0.9fr 0.7fr 0.7fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 6px;
+  font-size: 12.5px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.scantable__row--head {
+  color: var(--text-2);
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.scantable__row--body {
+  background: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  color: var(--text-0);
+  width: 100%;
+  transition: background 0.12s ease;
+}
+
+.scantable__row--body:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.scantable__row--body:last-child {
+  border-bottom: none;
+}
+
+.scantable__file {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scantable__hash {
+  color: var(--text-1);
+  font-size: 11.5px;
+}
+
+.scantable__family {
+  color: var(--text-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.scantable__time {
+  color: var(--text-2);
+}
+
+@media (max-width: 900px) {
+  .scantable__row {
+    grid-template-columns: 1.4fr 1fr 0.9fr 0.7fr;
+  }
+  .scantable__hash,
+  .scantable__time {
+    display: none;
+  }
+}

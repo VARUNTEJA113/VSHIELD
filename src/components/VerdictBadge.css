@@ -1,0 +1,22 @@
+.verdict {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.verdict::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.verdict--malicious { color: var(--red); background: rgba(229, 86, 106, 0.12); }
+.verdict--suspicious { color: var(--amber); background: rgba(232, 169, 74, 0.12); }
+.verdict--clean { color: var(--green); background: rgba(86, 201, 143, 0.12); }

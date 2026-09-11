@@ -1,0 +1,31 @@
+.dash {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.dash__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.dash__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.dash__radar .panel__body,
+.dash__trend .panel__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .dash__stats { grid-template-columns: repeat(2, 1fr); }
+  .dash__grid { grid-template-columns: 1fr; }
+}

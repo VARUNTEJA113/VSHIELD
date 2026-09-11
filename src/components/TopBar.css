@@ -1,0 +1,58 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 36px 4px;
+}
+
+.topbar__title {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.topbar__clock {
+  font-size: 13px;
+  color: var(--text-2);
+  letter-spacing: 0.03em;
+}
+
+.topbar__analyst {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 12px 6px 6px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: var(--bg-1);
+}
+
+.topbar__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--blue));
+  color: var(--bg-0);
+  font-size: 10.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar__analystname {
+  font-size: 12.5px;
+  color: var(--text-1);
+}
+
+@media (max-width: 900px) {
+  .topbar { padding: 20px 18px 4px; }
+  .topbar__analystname { display: none; }
+}

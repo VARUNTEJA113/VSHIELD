@@ -1,0 +1,24 @@
+.reports__filters {
+  display: flex;
+  gap: 6px;
+  background: var(--bg-3);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.reports__filter {
+  background: transparent;
+  border: none;
+  color: var(--text-2);
+  font-size: 11.5px;
+  font-weight: 500;
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+
+.reports__filter.is-active {
+  background: var(--bg-1);
+  color: var(--text-0);
+  box-shadow: 0 0 0 1px var(--line);
+}

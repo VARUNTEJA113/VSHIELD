@@ -1,0 +1,85 @@
+.statcard {
+  --rx: 0deg;
+  --ry: 0deg;
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  background: linear-gradient(155deg, var(--bg-2), var(--bg-1));
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px 16px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: perspective(700px) rotateX(var(--rx)) rotateY(var(--ry));
+  transition: transform 0.12s ease-out, border-color 0.2s ease;
+  will-change: transform;
+}
+
+.statcard:hover {
+  border-color: var(--line);
+}
+
+.statcard__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(180px circle at var(--mx) var(--my), rgba(90, 200, 193, 0.12), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.statcard:hover .statcard__glow {
+  opacity: 1;
+}
+
+.statcard__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.statcard__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-soft);
+  color: var(--text-1);
+}
+
+.statcard__icon svg { width: 16px; height: 16px; }
+
+.statcard--teal .statcard__icon { color: var(--teal); }
+.statcard--red .statcard__icon { color: var(--red); }
+.statcard--amber .statcard__icon { color: var(--amber); }
+.statcard--green .statcard__icon { color: var(--green); }
+.statcard--blue .statcard__icon { color: var(--blue); }
+
+.statcard__delta {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+}
+
+.statcard__delta--up { color: var(--red); background: rgba(229, 86, 106, 0.12); }
+.statcard__delta--down { color: var(--green); background: rgba(86, 201, 143, 0.12); }
+.statcard__delta--neutral { color: var(--text-2); background: rgba(255,255,255,0.04); }
+
+.statcard__value {
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transform: translateZ(18px);
+}
+
+.statcard__label {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--text-2);
+}
